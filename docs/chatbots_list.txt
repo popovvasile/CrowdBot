@@ -1,0 +1,37 @@
+# TODO crowdbot production
+@CrowdRobot  CrowdBot                        892372248:AAEM32Ye0ye4rTkyTuk5Z4minhsNKVhSQ-w
+@ChatNetworkBot CrowdBotTest                 514295854:AAGD2iqpBMm8g7cn3zp9DYuMs2F_JNdo3NQ
+
+# TODO teambot production
+@CrowdTeamBot  CrowdTeamBot                  744779225:AAE8CSxUSNzJxa3o6nLSr91PeZwCw7gkink
+@RealCrowdBot  CrowdTeamBotFather            659916981:AAFI5ewHubU0_vMBFY1HjK4r8pOdjDa-2HU
+
+# TODO shop production
+@CrowdShopBot   CrowdShop                    873905267:AAGisFQ5Us7nv9cCHZfv8AIJIfTF-Ohpmfw
+@CrowdFunBot CrowdShopTest                   835405066:AAGqH6XRek3BGED6lh_ha3BVp8_oAle5rZ0
+
+
+
+# TODO crowdbot home testing
+@DEMObyballbot    CrowdHomeBot               633257891:AAEAUjZeBCo2RQ6-b3OC-AJzcmf623F_P7w
+@CrowdHomeTestBot CrowdHomeTest              804642806:AAGWpzsG2IW_o74dnf1dxYRDLBn1Jz_q-nU
+
+
+# TODO shop home testing
+@CrowdShopHomeBot      CrowdShopHome         764696691:AAE8_d6iTPGlnT7-N-Dl2Vi07MIl4o3YxSk
+@CrowdShopHomeTestBot  CrowdShopHomeTest     886394487:AAEvc7n1flBePQo1V3Bl6uWYj5LtMLGC2Zo
+
+# TODO teambot home testing
+@SuperMarioRunBot  TeamCrowdFatherTest       502301506:AAGIuV3XCZuOrIhiCPhRdWXNK5ehWMueizI
+@BrainAgeBot  TeamCrowdTest                  477358694:AAF4_pWPq07yFKExf4RTSe80KAK9rP-N7aI
+
+occupyguguta@gmail.com
+
+# TODO Guguta
+@GugutaBot        OccupyGuguţă               806812696:AAEH_QbgIvn2h5_LEdB4v2c5cPi8zwcY5E8
+@GugutaInternBot  OccupyGuguţă Intern        894721326:AAGJZKmGlRNc3oHwg6HrQvHQOc39SQiR3OY
+@GugutaShopBot    OccupyGuguţă Shop          833531405:AAEvURn6i6XPYJDbldW-Kk3hkracDzWGi6U
+
+ssh root@67.211.220.14
+python#1917
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES

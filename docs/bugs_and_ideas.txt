@@ -1,0 +1,72 @@
+TODO FUTURE
+    - * БАГИ когда несколько админинов одновременно меняют состояние документов в базе данных
+    - * maybe add dynamic changes using edit(сделать везде где можно редактирвание сообщения вместо удаления и отправки нового)
+    - * Use one code for the updating database in blocks(inbox, user) and so on
+    - * More information about users in the user list (active users count...)
+    * https://invitemember.com/ платный контент в виде групп и каналов
+    * donations notifications(donate comment)
+    * Blink on new messages
+    * One block for messages and the entire bot
+    * Unread message is not read- it must appear on the very bottom
+	* To contacts and address must be added more info- multiple messages
+    - * Показывать только активных юзеров
+        или кнопка удалить под отписавшимися
+        или отдельный список под отписавшимися
+        или просто цифра ансабов
+    - * Поиграться с отображением альбомов(в short отображении товара в шопе)
+    - * Messages (5 messaegs, 2 new)
+	- * BUG: answer not only once to messages, but also let the possibility to write more messages
+	- * SHARE PHONE NUMBER
+	-  + * В Full template заказа убрать пагинацию и сделать кнопку Items - которая будет показывать товары с заказа
+    - * Где ожидается текст - если текст начинается / - не работает(когда вводишь имя товара например)
+    - * Использовать один и тот же content_dict для всей базы данных
+    - * Привязать опрос и геопозиции к кнопкам
+    - * Обработка captions в кнопках(сообщениях)
+    - * Сортировка одной страницы в inbox(что бы новое было снизу)
+    - * Отписчики - отображение в боте(или хотя бы в поиске)?
+    - * Unauthorized (bot was blocked by the user/deactivated) - красивое отображение - фикс повсеместно
+    - * Уведомление когда товар продан(когда заказ выполнили) и больше не отображается пользователям
+    - * Использовать телеграм классы для работы с заказами, данными и тд.
+        - https://python-telegram-bot.readthedocs.io/en/stable/telegram.html#payments
+        - https://python-telegram-bot.readthedocs.io/en/stable/telegram.html#passport
+    * во время оформления offline заказа показывать все введённые поля
+    - * В каждом списке где есть пагинация - вернуть title(или "Текущая страница") (как было в прошлом) и сделать что бы pagination сообщение делало реплай на title
+            (это позволит юзером быстро переходить на вверх по списку при такой же информативности)
+
+
+    - * отложенные посты
+    - * в ботфазере фича "Остановить/Возобновить" для ботов
+    - * TOKEN hashing, and improve bot_father connect(don't send tokens every time and don't use it on bot_father side)
+    - * Фича по Переименованию кнопок "Магазин", "Сообщение"
+    - * Полный рефакторинг сообщений
+    - * создание квизов для покупателей
+    - * Выставление цены товара в ноль
+    - * Ускорить создание бота - что бы не ждать 4 секунды
+
+-TODO-FEATURES USER SIDE
+    - * Отмена заказа
+    - * Предупреждать юзера о всех изменениях в корзине, заказах и тд.
+    - * Offline order creation:
+        SHARE GEO POSITION
+
+-TODO-FEATURES ADMIN SIDE
+    - * для каждой категории добавить свои поля(и про добавлении товара в категорию спрашивать для заполнения эти поля)
+    * когда количество товара меняется и становиться меньше чем количество заказов(или считать корзину)
+    - админа предупреждают скольким клиентам прийдется отказать
+    - * Комментарий админа
+    - * ексель добваление товара
+    - * вывести текущий товар в ексель
+    - * вывевести проданый товар в екселе(по датам от-до, по месяцам)
+    - * При создании товара кнопки - [[Отменить заказ], [Назад]], кнопка "Назад" переводит в предыдущие меню
+    - * Возможность выбрать титульный файл для товара
+    - * small pictures in the "edit item content" menu
+    - * В описание магазина можно добавить файлы
+
+-TODO-FEATURES BOTH
+    - * Categories in categories
+    - * Поиск по артикулам(товары, заказы)
+    - * timed discount price
+    - * personal discount price
+    - * e-bay auction
+    - * PROMO CODE
+    - * Редактирование заказа

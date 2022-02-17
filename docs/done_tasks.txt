@@ -1,0 +1,201 @@
+    [DONE] * Валидация цены баг - нижнее подчеркивание
+    [DONE] * Баги в Удалении категории(Если есть товара который есть в новых заказах) и вообще в целом работа с товаром
+    [DONE] * Trash - restore order # TODO - ADD CATEGORY IF IT DOESN'T EXIST
+    [DONE] * Проверить Users and Messages - Delete Messages
+    [DONE] * Address validation in admin setting shop and when creating shop
+    [DONE] * В Full template и Short template заказа - при слишком большом тексте(Items)
+            - HTML BUG обрывать текст и показывать три точки
+	[DONE] * В Short template товара - при слишком большом тексте(Not finished orders) ПО 3 ШТ
+	        - HTML BUG обрывать текст и показывать три точки
+    [DONE] * File "/root/test_yura/crowdrobot/modules/payments/payments_config.py", line 326, in handle_edit_finish
+            KeyError: 'payment_token'
+    [DONE] ValueError: KZT is not a supported currency
+    [DONE] ValueError: UAH is not a supported currency
+    [DONE] Погрешность при смене валюты может выставить цену минимальней чем минимальный возможный платёж
+    [DONE] поставить allow_reentry - ConversationHandler
+    [DONE] Error Callback Доделать нормально, с логами
+    [DONE] Currency Exchange converter fix
+    [DONE] * в trash показывает чужие товары
+    [DONE] * Unauthorized (bot was blocked by the user/deactivated) когда отвечаешь отписчику/удалённому(в ответах)
+    [Done] * не показывает Article в магазине юзер часть
+    [Done] * Валидация на количество контента в сообщении(в ответе)
+    [Done] * Валидация данных при изменении приветсвия(реагировало на фотку)
+    [Done] * Убрать из валидации цены проверку на длину строки
+    [DONE] * Buttons - html escape(name, content) and so on
+    [DONE] * telegram.error.BadRequest: Button_data_invalid (длина callback_data кнопки)
+    [DONE] Одинаковые имена категории
+    [DONE] * Поправить юзер шаблоны(discount)
+    [DONE] % * Ошибки с токенами оплаты(Яндекс касса и тд)
+    [DONE]    - не принимает некоторые токены(
+                например выбрана валюта RUB и при этом не принимает токен Яндекс кассы)
+    [DONE]    - сделать нормальное и кокретное уведомление об ошибке(
+                если проблема в валюте показать одну строку
+                если проблема в неправильном токене - показать другую и тд.)
+	[DONE] указание цены и количества товара(если три символа после точки - плохо работает)
+	[DONE] + * После создания шопа - не показывать кнопку бек, а сразу в меню переводить
+	[DONE] + * Убрать discount price с добавления товара
+	[DONE] + * Подтверждение при смене валюты
+	[DONE] + * Иногда при Изменение валюты(USD->RUB) 4 символа после точки, и если после точки 0 отображать цену как integer
+	[DONE] + * при удалении категории кроме товаров чекнуть NEW заказы и если они есть - запретить удаление категории пока не закроются все NEW заказы
+	[DONE] + * С первого раза не переключается на онлайн
+	[DONE] + * Уменьшить цену тестового инвойса до минимума(см. ссылку) и вставить мини гайд(гифка) в текст
+		    https://core.telegram.org/bots/payments#supported-currencies
+	[DONE] + * Указание цены товара(при добавлении и редактировании) Payments- can't pay less them 1$ and more then Max amount
+		    https://core.telegram.org/bots/payments#supported-currencies
+	[DONE] * Discount price обработка()
+	[DONE] + * Offline/online order creation data validation:
+	[DONE]	DESCRIPTION LENGTH VALIDATION
+	[DONE]	PHONE NUMBER
+	[DONE] регекс который выводит в главное меню при рандомном тексте - убиваeт кнопку если она находилась в state(мб потому что не указана в fallbacks)
+	[DONE] * Если нет товаров в категории - не показывать категорию юзерам
+	[DONE] + * Если вообще нет товаров - blink(о отм что нет товара) когда нажимаешь catalog - there is no shop
+	[DONE] Picture must be smaller
+    [DONE] Remove all the strings from hard-code and move them to languages.json, especially the shop
+	[DONE] + * ФЛОУ ОНЛАЙН - (см. карту флоу)
+	[DONE]      1) Убрать пункт онлайн/оффлайн шоп при создании шопа.
+	[DONE]      2) Добавить в настройки способ оплаты: безналичный расчёт.(Появляется кнопка изменить токен)
+
+
+- STRINGS
+    [DONE] Привет, Vasi новый админ! + add dismiss
+    [DONE] * Убрать заголовки в пагинацию как в инбоксе
+        - Item list
+        - Order list(Написать норм заголовок)
+        - Orders list user side
+        - Users and Message - User list
+    [DONE] * В под меню редактирования убрать вместо трех \n - сделать два и выделить всё жирным
+    [DONE] * Убрать с карточки заказа комментарий если его нет
+    [DONE] * ВСе шаблоны по схеме и ноутификацию
+        - пояснения регуляром
+        - <i> - поля, <b> инпуты
+    [DONE] * все машинки и ручки между полем и инпутом
+    [DONE] * Убрать самое первое сообщение в главном меню
+    [DONE] * Убрать слово "Назад" со всех back кнопок
+    [DONE] * Придумать строку для тестового платежа
+    [DONE] * Убрать пресс БЭК-стрингз везде
+    [DONE] * add_product_add_files - два стригса для товаров и кнопок
+    [DONE] * Change greeting- back must be to settings, delete all messages - none left
+    [DONE] * You have been invited as an administrator to @CrowdHomeTestBot (http://t.me/CrowdHomeTestBot)
+         <i>Never forward this message to other persons.</i>
+    [DONE] * <b>Write us a message.</b>
+
+    [DONE] back from change greeting - fix
+    [DONE] back from statistic - fix
+	[DONE] normal back after delete message in inbox
+	[DONE] 2. Едит дескрипшн. Неверный бэк
+
+- MESSAGES
+	[DONE] + * Убрать анонимные сообщения
+	[DONE] + * Убрать пока ноутификешены о новых сообщениях(send_message)
+	[DONE] + * When user click "Open" and "Hide" in message notification - it works bad and for admin as well
+	[DONE] + * Когда отправляем сообщения(юзеру или всем) - try/except for BadRequest
+	[DONE] + * УБРАТЬ КНОПКУ send message to donators
+    [DONE] * Добавить фичю вкл/выкл в настройки бота
+
+--USERS
+	[DONE] + * под юзером в списке юзеров создать одну кнопку которая будет выводить на карточку юзера со всеми фичами связаными с юзером
+	[DONE] + * Когда отправляем сообщения(юзеру или всем) - try/except for BadRequest
+	[DONE] * Поиса юзеров(User search problems)
+
+--SETINGS
+	[DONE] + * Пофиксить список админов(стрингс), fix double admins bug
+	[DONE] + * Пофиксить удаление админов(Что бы переносило в обычные юзеры)
+
+--BUTTONS
+	[DONE] + * Кастомные кнопки - убираем с главного меню
+	[DONE] + *
+            1)Список существующих кнопок + добавить
+            2)  --Редактировать контент--
+                --Поменять название--
+                --Удалить--
+            3)(Редактрование) - как в продукте
+
+            Ссылочные кнопки-
+            1)  --Ред. ссылку--
+                --Поменять название--
+                --удалить кнопку--
+            * Поменять реплай маркап на инлайн маркап в ЭДИТ БАТТОН
+
+	[DONE] * Валидация:
+	[DONE]    - максимальное количество кнопок
+	[DONE]   - длинна имени кнопки
+	[DONE]    - количество закрепляемого контента
+
+
+--MENUS +++++++++++
+	[DONE]+ * Кнопки удаления сообщений в messages сделать отдельную менюшку с этими 3мя кнопка удаления
+	[DONE] + * Убираем донаты, а именно
+	[DONE]- убираем "Configure payments" с настройки бота
+	[DONE]	- В основном меню вместо кнопки Shop and Payments
+	[DONE]+ * Убираем статистику донатов, и переносим кнопку User Statistic в настройки
+	[DONE]+ * МЕНЮ ЮЗЕРА
+	[DONE]	1)ЕСЛИ ШОП не подключен - кнопка "send messages" в один ряд, потом кастомные
+	[DONE]	2) ЕСЛИ ПОДКЛЮЧЕН 	 - кнопка "send message", "shop", потом кастомные
+	[DONE]	3) КНОПКА ADMIN MODE всегда внизу
+	[DONE] + * Сделать все меню в один столбик
+	[DONE] + * Перенести юзер вью в главное меню. Убрать юзер вью из кнопок
+	[DONE] * Стандартное приветсвие
+
+--BOT_FATHER
+    [DONE] * Убрать третий шаг приветсвие
+
+-TODO BUGS
+    [DONE] * Когда в настройках шопа меняешь доставка на самовывоз - нужно спросить адресс магазина,
+        потому что в chatbots_table["shop"] - нет ключа "address", а этот ключ используется во время оформления заказа
+    [DONE] * попытался поменять адресс через настройки - не получилось, в документ не добавляется ключ "address"
+    [DONE] * При изменении категории иногда создается новая - вместо изменении имени
+    [DONE] когда устанавливаешь discount price - исключение ?
+    [DONE] При изменении плтежного токена - исключение
+    [DONE] при изменении quantity на очень большое число - исключение. При изменении на маленькое число - в тексте отображается не правильно как tuple
+    [DONE] Фича которая выводит в главное меню при рандомном тексте ведёт не адекватно в некторых меню бота
+         Когда на прайсе вводишь текст, а не число - кидает в главное меню и отказывают кнопки
+    [DONE] при добавлении товара не устанавливается unlimited, когда должно быть True, равно False
+    [Done] когда в настройке кликаешь "disable shop", а потом сразу кликаешь "shop" - " enable_shop" - telegram.error.BadRequest: Message to delete not found
+    [Done] Кнопка Back в выборе категорий в юзер-части выводит в админку(ловит другой хендлер)
+    [DONE] При удалении категории - удаляются все товары - придумать(если есть заказы и если есть товары) и пофиксить
+    [DONE] When adding numbers in different parts of the bot- write back that the introduced number is wrong
+    [DONE]  Фича которая выводит в главное меню при рандомном тексте ведёт не адекватно в некторых меню бота
+         Когда на прайсе вводишь текст, а не число - кидает в главное меню и отказывают кнопки
+    [DONE] изменении категории товара - ведёт в юзер шоп
+    [DONE] Когда в настройках шопа меняешь доставка на самовывоз - нужно спросить адресс магазина,
+            потому что в chatbots_table["shop"] - нет ключа "address",
+            а этот ключ используется во время оформления заказа
+    [DONE]  попытался поменять адресс через настройки - не получилось, в документ не добавляется ключ "address"
+    [DONE] При изменении категории иногда создается новая - вместо изменении имени
+    [DONE-DOUBLE CHECK] Округлить цену после изменения currency
+        * Уведомление когда товар продан
+    [DONE] После создания шопа - не показывать кнопку бек, а сразу в меню переводить
+    [DONE] Delete messages everywhere
+    [DONE] edit description - не правильный бек - и в других настройках проверить
+    [DONE] плохое отображение категорий в списке категорий(кнопки в одну строку)
+    [DONE] Во время оформления заказа не отображаются айдишники товара
+    [DONE] Проверка наличия товаров при оформлении заказа(Сделать property)
+    [DONE] * Paid/unpaid and release the content or send a notification that the item has been shipped
+    [DONE]* Округлить цену после изменения currency
+    [DONE] category delete - при удалении если есть товары за категорией - уведомлять сколько товаров будут удалены
+    [DONE] Показывать всю информацию о товаре во время добавления
+    [DONE] edit самовывоз/доставка
+    [DONE] Заказы Show orders to admin: paid/unpaid, executed/pending
+    [DONE] Delete messages everywhere
+    [DONE] Changing shop currency - give current exchange rate and ask for the exchange rate then translate all prices
+    [DONE] При изменении address, description, currency - показывать текущие значения
+    [DONE] EDIT SHOP: Edit type, TOKEN only if there is one, Payment description if there is no token
+    [DONE] Заказы Show orders to admin: paid/unpaid, executed/pending
+    [DONE] Уведомления о заказах
+    [DONE] Edit files in product
+    [DONE] В списке товаров сделать caption, а не просто текст после фотки
+    [DONE] Добаваление разного контента
+    [DONE] * Онлайн заказы
+    [DONE] * Offline order creation:
+        DESCRIPTION LENGTH VALIDATION
+        SHARE PHONE NUMBER
+        PHONE NUMBER VALIDATION
+    [DONE] * Проверка наличия товаров при оформлении заказа(Сделать property)
+    [Done] список товаров в заказе
+    [DONE] Отображение разного контента
+    [DONE] * Discount price обработка
+    [Done] Добавить артукулы в заказы и товары
+        https://www.mongodb.com/blog/post/generating-globally-unique-identifiers-for-use-with-mongodb
+    [DONE] Отображение комментария клиента в заказах
+    [DONE] Кнопка "Просмотр" на товарах(если большое описание или много контента)
+    [DONE] * После создания шопа - не показывать кнопку бек, а сразу в меню переводить

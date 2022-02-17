@@ -1,0 +1,131 @@
+--CURRENT TODO:
+    СТРОКИ:
+        [DONE] * Поменять эмодзик в кнопке "Каталог"
+        [DONE] * В шаблонах дескрипшн регуляром прописать
+        [DONE] * кнопку «Купить» поменять на «Корзина» в магазине
+        [DONE] * в Order item поменять Category и name местами
+        [DONE] * орфография
+            [DONE] - ошибка в добавлении товара при выборе категории
+            [DONE] - ошибка в слове "Не законченые" заказы в карточке товара
+            [DONE] * правка html строки в изменении имени кнопки(пункт меню)
+        [DONE] * Строки в настройках шопа
+            [DONE] - "Настрой свои платежи и донаты" -> "Настройки магазина"
+            [DONE] - "Подключить {} способ оплаты" -> "Подключить {}-оплату"
+            [DONE] - "Добавить онлайн оплату" -> "Добавить токен оплаты" + текст наоборот
+
+    [DONE] * MAX_CATEGORIES_COUNT - change from 5 to 20
+    [DONE] * не переводить в главное меню при при нажатии на пустую корзину в магазине
+    [DONE] * поправить поиск юзеров
+    [DONE] * Добавлено меню которое реагирует на текст и помогает выйти в главное меню
+    [DONE]* улучшена работа запуска токенов
+
+
+
+    BOT_FATHER
+        [DONE] * Сделать юзеру возможность легче начать работу с ботом(кнопка с переходом в бот с командой /start)
+        [DONE] * Сделать что бы кнопка бек всегда работала
+        [DONE] * Добавлено меню которое реагирует на текст и помогает выйти в главное меню
+
+
+--BUGS
+    - * currency - reply markup text bug(change Reply to Inline)
+    - * Cancel order - TODO - ADD CATEGORY IF IT DOESN'T EXIST
+    - * PRICE round in user side works strage
+    - * fix rus admin invite(no forward button)
+    - * Если у пользователя нет username - в базе данных в поле username может быть None - и в некоторых местах мы работаем с этим полем как с строкой - Exception
+    - * Фотка отображается большой в списке юзеров() - если у пользователя нет описание(if not user_bio: show without image)
+    - * В статистике не показываются ансабы, и те же ансабы остаются в статистике(проверить корректность работы)
+    [DONE] * JobQueee на отписчиков
+    - * Редактирование сообщений в рассылках
+    [DONE] * убрать валидацию телефонов
+    [DONE] * /report в ботфазере - ему плохо
+    [DONE] * shop_admin_confirm_new_cancel - кастомная строка если отменяешь новый заказ
+    - * Нагрузочный тест
+
+--MAIN TODO
+    - * если в магазине одна категория товаров показывать сразу товары этой категории при клике на «Каталог» или даже менять кнопку каталог на кнопку этой категории
+    - * Кнопка переход в заказы с ноутификации о новом заказе
+    - * отображение количества товаров в кнопке "Корзина" в user_side в товарах(
+        а так же что бы в этой кнопке динамически менялось строка количества при добавлении товара и удалении)
+	- * Поиск товара и заказа по id
+	- * Поменять реплай маркап на инлайн маркап в ЧЕНЧ КЬЮРЭНСИ.
+	- * Изменение контента товара - показывать blink или сообщение при добавлении контента
+	- * Payments- parse the payment token from forwarded message (same in BotFather Crowdbot)
+	- * Добавить кнопки фильтров в заказы(новые, выполненные)
+	- * Добавление товара: убрать шаг с двойным подтверждением нового товара. Добавлять строки в описание товара при добавлении новой инфы о товаре.
+	- * В корзине, ордерс. Добавить кнопку: очистить корзину(Спорно из за проверки _id товаров)
+
+
+--PREMIUM
+    1)user creates a shop- 7 days count
+    2)2 days before that- send notification
+    3)stop the bot if not paid
+    4)allow to pay more than one month
+
+
+STRINGS
+    * в админ инвайте сообщения убрать два текста и оставить один
+    * сделать большие шаблоны с параметрами
+    - * сделать артикул меньше
+	- * В темплейте сообщения если один и тот же тип файла повторяется - показывать число
+	- * Сделать Inline клавиатуру в валюте, добавить белорус рубли
+	1. Трэш----айтем лист----неверный бэк
+	3. Неверный бэк из делита категорий.
+	4. Меняешь греетинг и переводит в главное меню, а не в настройки
+
+
+--MESSAGES
+	- * Messages history
+   	- * send message to users - do check and delay and threads
+	- * добавить кнопку send message to customers
+		(если не подключен шоп - предложить создать)
+		(если нет покупателей) - об этом сообщается
+
+
+--USERS
+	- * добавить в заказы кнопку которая будет выводить на карточку юзера
+	- * имя и username ансабов не обновляется в списке юзеров
+    - * handling admins that leave the bot
+
+
+--SYSTEM
+	- * Узнать за Timed Out Error в ботах
+	- * Перепроверить везде to_delete()
+	* проверить и проработать функции helper_funcs.helper, errors callbacks,
+	* Protect all /start, backs, get_help, help_button and so on with user_data.clear() function call
+	* сделать одну back_to_modules_<nameOfModule> функцию
+    [DONE] * Удалить все лишние строки с languages(используя парсинг кода)
+    * changed tokens and 2 bot instances running handlers(with notifications to BotFather and
+    with token change feature)
+   	* Cython implementation
+	* Получаемые сообщения множаться.
+	* при вводе комманды "/start" - не удаляет сообщения(to_delete), не удаляет главное меню(сообщение главного меню не ложится в user_data в to_delete)
+
+
+--PRODUCTION
+	* Application factory  (production vs local)
+	[DONE] * NGINX for the website
+
+
+--BOTFATHER
+	* stickers bug in bot_father reports(check stickers for crowd)
+	* Payments- parse the token from forwarded message
+
+
+-- CODE STYLE (One code style for whole project - lil rules)
+	* max 100 symbols on one line
+	* imports(first build-in, then dependencies, then project imports)
+	* use "update.effective_chat.id" to pass chat_id
+	* use "" for strings not ''
+	* update_callback_query after each inline button press
+	* use <strong> and <em>, not <b> and <i>
+
+--NOTES
+    # 410694247 - Tranzzo,
+    # 632593626 - LiqPay(Ukraine),
+    # 381764678 - Яндекс.Касса,
+    # 710555963 - Rave,
+    # 371317599 - Paycom,
+    # 401643678 - Sberbank,
+    # 398062629 - CLICK,
+    # 284685063 - Stripe
